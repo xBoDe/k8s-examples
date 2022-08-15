@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: prod
+  name: prod-example
+  labels:
+    app: prod-example
+    type: network
+spec:
+  containers:
+    - name: nginx
+      image: nginx
