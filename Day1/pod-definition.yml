@@ -1,11 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-first-pod
+  name: multi-pod
   labels:
-    app: myFirstPod
+    app: multi-pod
     type: network
 spec:
   containers:
     - name: nginx
-      image: nginx
+      image: nginx:alpine
+    - name: redis
+      image: redis
+    - name: memcached
+      image: memcached
